@@ -4,7 +4,7 @@
         "profile_name": null,
         "project_name": "url_shortener",
         "runtime": "python3.8",
-        "s3_bucket": "brick-stack",
+        "s3_bucket": "brickstack-sa",
 		"api_key_required":false,
 		"timeout_seconds":30,
         "lambda_description":"URL Shortener API prod",
@@ -17,6 +17,8 @@
         "log_level":"INFO",
         "memory_size":512,
         "apigateway_enabled":true,
-        "aws_region":"sa-east-1"
+        "aws_region":"sa-east-1",
+        "certificate_arn": "arn:aws:acm:sa-east-1:689796822615:certificate/8caabcf5-c23a-4162-8036-6bae67e31847",
+        "domain": "www.locarseguro.com"
 	}
 }
