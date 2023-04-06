@@ -1,0 +1,22 @@
+{
+	"prod": {
+        "app_function": "entrypoint.app",
+        "profile_name": null,
+        "project_name": "url_shortener",
+        "runtime": "python3.8",
+        "s3_bucket": "brick-stack",
+		"api_key_required":false,
+		"timeout_seconds":30,
+        "lambda_description":"URL Shortener API prod",
+        "extra_permissions": [{ 
+            "Effect": "Allow",
+            "Action": ["ssm:*"],
+            "Resource": "*"
+            }],
+        "aws_environment_variables": {"stage":"prod"},
+        "log_level":"INFO",
+        "memory_size":512,
+        "apigateway_enabled":true,
+        "aws_region":"sa-east-1"
+	}
+}
