@@ -4,7 +4,7 @@ import boto3
 
 ssm = boto3.client('ssm', 'us-east-2')
 
-dynamodb = boto3.resource('dynamodb',"sa-east-1")
+dynamodb = boto3.resource('dynamodb',"us-east-2")
 #table name
 DBSession = dynamodb.Table('shortener')
 
