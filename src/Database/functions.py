@@ -21,6 +21,9 @@ def retrieve_url(id):
     print(id)
     fe=Key('id').eq(id)
     results = DBSession.scan(FilterExpression=fe)
+    while 'LastEvaluatedKey' in results and not results['Items']:
+        results = DBSession.scan(ExclusiveStartKey=results['LastEvaluatedKey'],FilterExpression=fe)
+
     if not results['Items']:
         return None
     else:
